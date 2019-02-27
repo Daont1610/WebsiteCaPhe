@@ -1,0 +1,28 @@
+<div class="container">
+  <section class="content-sp-hot">
+    <h2 style="margin: 20px 0">Sản phẩm mặt hàng</h2>
+    <div class="row">
+     {{#each products}}
+      <div class="col-sm-3 item">
+        <div class="card" style="width: 100%">
+          <img src={{image}} width="100%" height="150px"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="#" style="color:chocolate;">{{name}}</a>
+            </h5>
+            <p style="color:gray; font-style: italic " class="text-detail">Thành phần: {{contents}}</p>
+            <p class="card-text">
+              <span  class="price text-danger">{{price}}đ</span>
+              <span class="ori-price">{{old_price}}đ</span>
+            </p>
+            <div class="text-right">
+              <a href="/chi-tiet/{{_id}}" class="btn" style="color:white; background-color: chocolate">Chi tiết</a>
+            </div>
+          </div>
+        </div>
+      </div>
+     {{/each}}
+    </div>
+  </section>
+</div>

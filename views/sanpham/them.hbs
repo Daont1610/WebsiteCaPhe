@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h2 style="text-align: center; margin-top: 30px; color: brown">Thêm sản phẩm</h2>
+      <form action="/san-pham/save-them/{{_id}}" method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+          <label for="">Tên sản phẩm</label>
+          <input type="text" name="name" id="" class="form-control" placeholder="Nhập tên sản phẩm">
+        </div>
+        <div class="form-group">
+          <label for="">Mô tả chi tiết</label>
+          <input type="text" name="contents" id="" class="form-control" placeholder="Mô tả về sản phẩm"  value="{{product.contents}}">
+        </div>
+        <div class="form-group">
+          <label for="">Giá</label>
+          <input type="number" name="price" id="" class="form-control" placeholder="Bạn chỉ được nhập số">
+        </div>
+        <div class="form-group">
+          <label for="">Giá cũ</label>
+          <input type="text" name="old_price" id="" class="form-control" placeholder="Bạn chỉ được nhập số">
+        </div>
+        <div class="form-group">
+          <label for="">Ảnh</label>
+          <input type="file" name="image" id="" class="form-control" placeholder="">
+        </div>
+        <div class="pull-right">
+          <input type="submit" id="" class="btn btn-primary" placeholder="" value="Xác nhận">
+          <a href="/" class="btn btn-danger">Huỷ</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="http://localhost:3000">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+ 
+</head>
+
+<body>
+  <div class="container">
+    <section class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: chocolate !important">
+        <a class="navbar-brand" href="/" style="color:white"><h4>Trang chủ</h4></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" style="color:white">
+                Danh mục
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {{#mainmenu}}
+                {{/mainmenu}}
+                {{!-- <a class="dropdown-item" href="/danh-muc/them"><p>Thêm danh mục</p></a> --}}
+              </div>
+            </li>
+
+            <a class="navbar-brand" href="/danh-muc/them" style="color:white"><p style="">Thêm danh mục</p></a>
+            {{!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                Sản phẩm
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Sản phẩm 1</a>
+                <a class="dropdown-item" href="#">Sản phẩm 2</a>
+                <a class="dropdown-item" href="#">Sản phẩm 3</a>
+              </div>
+            </li> --}}
+            {{!-- <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li> --}}
+          </ul>
+          
+          <form class="form-inline my-2 my-lg-0" action="" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+            <button class="btn btn-outline-success my-2 my-sm-0" style="color: white; border-color: white" type="submit">Search</button>
+          </form>
+        </div>
+        
+      </nav>
+    </section>
+  </div>
+
+  {{{body}}}
+
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/popper/popper.min.js"></script>
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
